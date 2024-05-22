@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1045617-5827-4830-bf6a-41065dea1fd3" name="Changes" comment="" />
+    <list default="true" id="e1045617-5827-4830-bf6a-41065dea1fd3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/StackController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StackController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseService/AbstractDBService.py" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseService/AbstractDBService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseService/ConnectionService.py" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseService/ConnectionService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseService/StackService.py" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseService/StackService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2gdJbjBO1c84YCo3275EkBoBCv4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -18,9 +43,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.ConnectDBService.executor": "Run",
+    "Python.ConnectionService.executor": "Run",
+    "Python.StackController.executor": "Run",
+    "Python.StackService.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -39,8 +80,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716021594954</updated>
-      <workItem from="1716021597125" duration="14000" />
+      <workItem from="1716021597125" duration="4813000" />
+      <workItem from="1716165882962" duration="3263000" />
+      <workItem from="1716263006680" duration="9169000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FlashcardPython$ConnectionService.coverage" NAME="ConnectionService Coverage Results" MODIFIED="1716265640100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
+    <SUITE FILE_PATH="coverage/FlashcardPython$main.coverage" NAME="main Coverage Results" MODIFIED="1716271834124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlashcardPython$StackController.coverage" NAME="StackController Coverage Results" MODIFIED="1716271675181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controllers" />
+    <SUITE FILE_PATH="coverage/FlashcardPython$ConnectDBService.coverage" NAME="ConnectDBService Coverage Results" MODIFIED="1716166328592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
+    <SUITE FILE_PATH="coverage/FlashcardPython$StackService.coverage" NAME="StackService Coverage Results" MODIFIED="1716268596788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
   </component>
 </project>
