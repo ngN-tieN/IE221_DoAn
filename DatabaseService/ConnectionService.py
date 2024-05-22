@@ -18,6 +18,6 @@ class MySQLConnection(AbstractDBService):
                           'front TEXT NOT NULL,' +
                           'back TEXT NOT NULL,' +
                           'stack_id INT,' +
-                          'FOREIGN KEY (id) ' +
+                          'FOREIGN KEY (stack_id) ' +
                           'REFERENCES STACK (id) ' +
                           'ON DELETE CASCADE )')

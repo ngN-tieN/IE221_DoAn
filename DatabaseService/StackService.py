@@ -45,3 +45,9 @@ class StackService(AbstractDBService):
         my_cursor.execute(sql)
         self._mydb.commit()
         return my_cursor.rowcount
+
+    def get_stack_id_by_name(self, stack_name):
+        my_cursor = self._mydb.cursor()
+        sql = "SELECT id FROM STACK WHERE name = \"{}\"".format(stack_name)
+        my_cursor.execute(sql)
+        return my_cursor.fetchone()[0]
