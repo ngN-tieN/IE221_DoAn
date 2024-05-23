@@ -10,7 +10,7 @@ class MySQLConnection(AbstractDBService):
         my_cursor.execute("""CREATE TABLE IF NOT EXISTS STACK
                             (id INT AUTO_INCREMENT PRIMARY KEY,
                               name TEXT NOT NULL""" + ")")
-
+        my_cursor.close()
     def init_card_table(self):
         my_cursor = self._mydb.cursor()
         my_cursor.execute('CREATE TABLE IF NOT EXISTS CARD ' +
@@ -21,3 +21,16 @@ class MySQLConnection(AbstractDBService):
                           'FOREIGN KEY (stack_id) ' +
                           'REFERENCES STACK (id) ' +
                           'ON DELETE CASCADE )')
+        my_cursor.close()
+
+    def init_study_session_table(self):
+        my_cursor = self._mydb.cursor()
+        my_cursor.execute('CREATE TABLE IF NOT EXISTS STUDYSESSION ' +
+                          '(id INT AUTO_INCREMENT PRIMARY KEY,' +
+                          'score INT NOT NULL,' +
+                          'session_date DATETIME DEFAULT CURRENT_TIMESTAMP, ' +
+                          'stack_id INT,' +
+                          'FOREIGN KEY (stack_id) ' +
+                          'REFERENCES STACK (id) ' +
+                          'ON DELETE CASCADE )')
+        my_cursor.close()

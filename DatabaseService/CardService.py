@@ -14,6 +14,7 @@ class CardService(AbstractDBService):
         for result in my_cursor.fetchall():
             card = CardDTO(id=result[0], front=result[1], back=result[2])
             card_list.append(card)
+        my_cursor.close()
         return card_list
 
     def add_card(self, stack_id, front, back):
@@ -21,13 +22,16 @@ class CardService(AbstractDBService):
         sql = "INSERT INTO CARD (front, back, stack_id) VALUES (\"{}\", \"{}\", {})".format(front, back, stack_id)
         my_cursor.execute(sql)
         self._mydb.commit()
-
+        my_cursor.close()
     def delete_card(self, card_id):
         my_cursor = self._mydb.cursor()
         sql = "DELETE FROM CARD WHERE id = {}".format(card_id)
         my_cursor.execute(sql)
         self._mydb.commit()
-        return my_cursor.rowcount
+
+        row_count = my_cursor.rowcount
+        my_cursor.close()
+        return row_count
 
     def update_card(self, card_id, front, back):
         my_cursor = self._mydb.cursor()
@@ -37,11 +41,14 @@ class CardService(AbstractDBService):
                         WHERE id = {}""".format(front, back, card_id)
         my_cursor.execute(sql)
         self._mydb.commit()
-        return my_cursor.rowcount
+        row_count = my_cursor.rowcount
+        my_cursor.close()
+        return row_count
 
     def get_card(self, card_id):
         my_cursor = self._mydb.cursor()
         sql = "SELECT * FROM CARD WHERE id = {}".format(card_id)
         my_cursor.execute(sql)
         card = my_cursor.fetchone()
+        my_cursor.close()
         return CardDTO(id=card[0], front=card[1], back=card[2])

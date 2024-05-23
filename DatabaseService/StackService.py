@@ -14,6 +14,7 @@ class StackService(AbstractDBService):
         for result in my_result:
             stack = Stack(id=result[0], name=result[1])
             stack_list.append(stack)
+        my_cursor.close()
         return stack_list
 
     def add_stack(self, stack_name):
@@ -21,13 +22,17 @@ class StackService(AbstractDBService):
         sql = "INSERT INTO STACK (name) VALUES (\"{}\")".format(stack_name)
         my_cursor.execute(sql)
         self._mydb.commit()
+        self._mydb.close()
 
     def is_exists(self, stack_name):
         my_cursor = self._mydb.cursor()
         sql = "SELECT * FROM STACK WHERE name = \"{}\"".format(stack_name)
         my_cursor.execute(sql)
         if my_cursor.fetchone() is None:
+            my_cursor.close()
+            self._mydb.close()
             return False
+        my_cursor.close()
         return True
 
     def delete_stack(self, stack_id):
@@ -35,7 +40,9 @@ class StackService(AbstractDBService):
         sql = "DELETE FROM STACK WHERE id = {}".format(stack_id)
         my_cursor.execute(sql)
         self._mydb.commit()
-        return my_cursor.rowcount
+        row_count = my_cursor.rowcount
+        my_cursor.close()
+        return row_count
 
     def update_stack(self, stack_id, name):
         my_cursor = self._mydb.cursor()
@@ -44,10 +51,14 @@ class StackService(AbstractDBService):
                 WHERE id = {}""".format(name, stack_id)
         my_cursor.execute(sql)
         self._mydb.commit()
-        return my_cursor.rowcount
+        row_count = my_cursor.rowcount
+        my_cursor.close()
+        return row_count
 
     def get_stack_id_by_name(self, stack_name):
         my_cursor = self._mydb.cursor()
         sql = "SELECT id FROM STACK WHERE name = \"{}\"".format(stack_name)
         my_cursor.execute(sql)
-        return my_cursor.fetchone()[0]
+        stack_id = my_cursor.fetchone()[0]
+        my_cursor.close()
+        return stack_id
