@@ -22,7 +22,6 @@ class StackService(AbstractDBService):
         sql = "INSERT INTO STACK (name) VALUES (\"{}\")".format(stack_name)
         my_cursor.execute(sql)
         self._mydb.commit()
-        self._mydb.close()
 
     def is_exists(self, stack_name):
         my_cursor = self._mydb.cursor()
@@ -30,7 +29,6 @@ class StackService(AbstractDBService):
         my_cursor.execute(sql)
         if my_cursor.fetchone() is None:
             my_cursor.close()
-            self._mydb.close()
             return False
         my_cursor.close()
         return True
