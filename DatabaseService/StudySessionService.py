@@ -36,7 +36,7 @@ class StudySessionService(AbstractDBService):
                     ROUND(AVG(CASE WHEN DAYNAME(CAST(studysession.session_date AS DATE)) = 'SATURDAY' THEN score ELSE score = 0 END), 2) AS SATURDAY,
                     ROUND(AVG(CASE WHEN DAYNAME(CAST(studysession.session_date AS DATE)) = 'SUNDAY' THEN score ELSE score = 0 END), 2) AS SUNDAY
                 FROM flashcard.studysession
-                WHERE week(session_date) = week(now())
+                WHERE week(session_date, 5) = week(now(),5)
                 AND stack_id={}""".format(stack_id)
         my_cursor.execute(sql)
         result = my_cursor.fetchall()[0]
@@ -57,7 +57,7 @@ class StudySessionService(AbstractDBService):
                     COUNT(CASE WHEN DAYNAME(CAST(studysession.session_date AS DATE)) = 'SATURDAY' THEN id END) AS SATURDAY,
                     COUNT(CASE WHEN DAYNAME(CAST(studysession.session_date AS DATE)) = 'SUNDAY' THEN id END) AS SUNDAY
                 FROM flashcard.studysession
-                WHERE week(session_date) = week(now())
+                WHERE week(session_date,5) = week(now(),5)
                 AND stack_id={};""".format(stack_id)
         my_cursor.execute(sql)
         result = my_cursor.fetchall()[0]

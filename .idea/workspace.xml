@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1045617-5827-4830-bf6a-41065dea1fd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -77,7 +81,9 @@
       <workItem from="1716362449266" duration="5622000" />
       <workItem from="1716383718510" duration="6125000" />
       <workItem from="1716431321917" duration="1634000" />
-      <workItem from="1716521002914" duration="1052000" />
+      <workItem from="1716521002914" duration="2925000" />
+      <workItem from="1716630607047" duration="1569000" />
+      <workItem from="1716695118844" duration="650000" />
     </task>
     <servers />
   </component>
@@ -86,7 +92,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlashcardPython$ConnectionService.coverage" NAME="ConnectionService Coverage Results" MODIFIED="1716389457388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
-    <SUITE FILE_PATH="coverage/FlashcardPython$main.coverage" NAME="main Coverage Results" MODIFIED="1716432788030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlashcardPython$main.coverage" NAME="main Coverage Results" MODIFIED="1716695159315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlashcardPython$StackController.coverage" NAME="StackController Coverage Results" MODIFIED="1716271675181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Controllers" />
     <SUITE FILE_PATH="coverage/FlashcardPython$ConnectDBService.coverage" NAME="ConnectDBService Coverage Results" MODIFIED="1716166328592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
     <SUITE FILE_PATH="coverage/FlashcardPython$StackService.coverage" NAME="StackService Coverage Results" MODIFIED="1716268596788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaseService" />
